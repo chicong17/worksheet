@@ -1,0 +1,48 @@
+.ChangeShift {
+  padding: 50px 0;
+  width: 100%;
+  overflow: hidden;
+  .ant-row {
+    justify-content: center;
+    .Table__User {
+      margin-top: 50px;
+    }
+  }
+}
+
+.change_Shift {
+  .userInfo {
+    .dFlex {
+      display: flex;
+    }
+    .btnChangeShift {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      button {
+        margin-right: 10px;
+      }
+    }
+    .ant-row {
+      margin-bottom: 15px;
+      .submit {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  .ant-modal-header {
+    background-color: #104382;
+    h2 {
+      color: white;
+      margin: 0;
+    }
+  }
+  .ant-modal-close-icon {
+    color: white;
+  }
+  .ant-select {
+    max-width: 155px;
+  }
+}

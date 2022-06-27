@@ -1,0 +1,239 @@
+.Avatar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 15px;
+
+  .formImg {
+    width: 40px;
+    height: 40px;
+    position: relative;
+
+    &:hover {
+      .UserList {
+        z-index: 1;
+        display: block;
+      }
+    }
+
+    .Image {
+      width: 100%;
+      height: 100%;
+      border: 3px solid #23466d;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 50%;
+
+      img {
+        width: 100%;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: scale(1.5);
+        }
+      }
+    }
+
+    .UserList {
+      position: absolute;
+      top: 120%;
+      min-width: 250px;
+      min-height: 300px;
+      right: 10px;
+      background-color: white;
+      box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+      border-radius: 10px;
+      animation-name: example;
+      animation-duration: 0.3s;
+      display: none;
+
+      &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: -5%;
+        right: 0;
+        height: 35px;
+        background-color: transparent;
+        width: 200px;
+      }
+
+      .UserHeader {
+        display: flex;
+        margin: 20px 10px;
+        border-bottom: 2px solid #dcd3d3;
+        padding-bottom: 15px;
+
+        .UserHeader__Image {
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        h3 {
+          font-size: 23px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          margin-left: auto;
+        }
+      }
+
+      .UserBody {
+        width: 100%;
+
+        .UserGroup {
+          margin: 20px 10px;
+          border-bottom: 2px solid #dcd3d3;
+          display: flex;
+          align-items: baseline;
+          padding-bottom: 20px;
+          cursor: pointer;
+
+          &:last-child {
+            border-bottom: none;
+          }
+          h3 {
+            color: grey;
+            margin: 0 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .UserBar {
+    width: 100%;
+
+    i {
+      cursor: pointer;
+      font-size: 30px;
+      color: white;
+    }
+
+    .UserListBar {
+      position: fixed;
+      inset: 0;
+      background-color: rgb(0 0 0 / 50%);
+
+      .UserCol {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0px;
+        background-image: linear-gradient(#ff8a00, #e52e71);
+        padding: 30px 60px;
+        animation: animationX 0.5s ease-in-out;
+        overflow: scroll;
+
+        .UserListColumn {
+          width: 100%;
+          .NavHeader {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            padding-bottom: 20px;
+
+            &::after {
+              display: block;
+              content: '';
+              position: absolute;
+              top: 100%;
+              left: 50%;
+              width: 50%;
+              height: 5px;
+              transform: translateX(-50%);
+              background-color: white;
+            }
+
+            .NavImage {
+              display: flex;
+              align-items: center;
+              img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                overflow: hidden;
+              }
+
+              h3 {
+                font-size: 35px;
+                margin: 0 50px;
+                color: white;
+              }
+            }
+          }
+
+          .NavBody {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border-bottom: 2px solid white;
+            padding: 20px 0;
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            .formGroup {
+              padding: 15px 0;
+              font-size: 18px;
+              display: flex;
+              justify-content: flex-end;
+              flex-direction: row-reverse;
+
+              i {
+                padding-right: 20px;
+                color: white;
+              }
+
+              h3 {
+                cursor: pointer;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes example {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 120%;
+    opacity: 1;
+  }
+}
+
+@keyframes animationX {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 576px) {
+  .NavImage {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+
+    h3 {
+      margin: 0 !important;
+    }
+  }
+}

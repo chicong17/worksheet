@@ -1,0 +1,63 @@
+.modalRequestContainer {
+  .ant-modal-content {
+    .ant-modal-header {
+      border-bottom: 1px solid #7d7d7d;
+      background-color: #104382;
+      .ant-modal-title {
+        color: white;
+        font-size: 20px;
+      }
+    }
+    .ant-modal-body {
+      padding-bottom: 0;
+      .ant-row {
+        margin-bottom: 20px;
+      }
+      .ant-checkbox-inner {
+        border: 1px solid #7d7d7d;
+      }
+      .ant-picker {
+        border: 1px solid #7d7d7d;
+      }
+      .ant-input {
+        border: 1px solid #7d7d7d;
+      }
+      .ant-radio-inner {
+        border: 1px solid #7d7d7d;
+      }
+      .ant-picker-input {
+        input {
+          font-weight: 500;
+        }
+      }
+    }
+    .ant-radio-group-outline {
+      margin: 0 10px;
+    }
+    .ant-modal-footer {
+      border-top: none;
+    }
+  }
+
+  .ant-input-textarea-show-count:after {
+    float: right;
+    color: rgba(0, 0, 0, 0.45);
+    white-space: nowrap;
+    content: attr(data-count);
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+  }
+  .ant-modal-close-icon {
+    color: white;
+  }
+}
+
+@media (max-width: 638px) {
+  .ant-modal {
+    .ant-radio-group-outline {
+      margin: 10px 0;
+    }
+  }
+}

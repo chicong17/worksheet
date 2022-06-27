@@ -1,0 +1,147 @@
+.tableContainer {
+  @mixin addFlex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  .ant-table {
+    overflow: hidden;
+    border-radius: 10px;
+    .tb_end {
+      @include addFlex;
+      justify-content: flex-end;
+    }
+    .tb_start {
+      @include addFlex;
+      justify-content: flex-start;
+    }
+    .tb_center {
+      @include addFlex;
+      justify-content: center;
+    }
+    .ant-table-title {
+      border: none;
+    }
+    .ant-table-container {
+      overflow: hidden;
+      border-radius: 10px;
+      border: 1.2px solid #bfbfbf !important;
+      .ant-table-header {
+        table {
+          border-top: unset !important;
+          thead {
+            tr {
+              th {
+                text-align: center;
+                background-color: #104382;
+                border-right: 1px solid #bfbfbf !important;
+                &:last-child {
+                  border-right: 0px solid #bfbfbf !important;
+                }
+                h4 {
+                  color: white;
+                  margin: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+      .ant-table-body {
+        table {
+          tr {
+            &:nth-child(odd) {
+              .ant-table-cell {
+                background-color: #e6f0ff;
+              }
+              .ant-table-cell.ant-table-column-sort {
+                background-color: #e6f0ff;
+              }
+            }
+            .colorBlue {
+              color: #2892ff;
+              cursor: pointer;
+            }
+            td {
+              border-bottom: none;
+              border-right: 1px solid #bfbfbf !important;
+              padding: 14px;
+              .textOverflow {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+              }
+              p {
+                margin: 0;
+              }
+              .textCenter {
+                text-align: center;
+              }
+              &:last-child {
+                border-right: 0px solid #bfbfbf !important;
+              }
+            }
+            .ant-table-cell-row-hover {
+              cursor: pointer;
+              background-color: #95bcf2 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .ant-pagination-total-text {
+    position: absolute;
+    left: 0;
+    span {
+      font-weight: 600;
+    }
+  }
+
+  .ant-pagination-options {
+    position: absolute;
+    right: 0;
+
+    &::after {
+      font-weight: 600;
+      position: absolute;
+      content: 'Items per page';
+      display: block;
+      left: -175%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .ant-pagination-prev {
+    margin: 0;
+    button.ant-btn.ant-pagination-item {
+      border-color: #d9d9d9;
+      &:hover {
+        border-color: #1890ff;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  .ant-pagination-prev.ant-pagination-disabled {
+    button.ant-btn.ant-pagination-item {
+      border-color: #d9d9d9 !important;
+    }
+  }
+
+  .ant-pagination-next {
+    button.ant-btn.ant-pagination-item {
+      border-color: #d9d9d9;
+      &:hover {
+        border-color: #1890ff;
+        transition: all 0.3s;
+      }
+    }
+  }
+  .ant-pagination-next.ant-pagination-disabled {
+    button.ant-btn.ant-pagination-item {
+      border-color: #d9d9d9 !important;
+    }
+  }
+}

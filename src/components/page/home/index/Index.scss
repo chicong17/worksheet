@@ -1,0 +1,130 @@
+.tableNotice {
+  .ant-table {
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  .ant-pagination-prev {
+    .ant-pagination-item {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+  }
+  .ant-pagination-total-text {
+    color: black;
+  }
+  .ant-pagination-options {
+    color: black;
+  }
+
+  .ant-pagination-item {
+    border-color: grey;
+
+    &.ant-pagination-item-active {
+      border-color: #1890ff;
+    }
+  }
+
+  .ant-table-title {
+    box-shadow: rgb(0 0 0 / 20%) 0px 5px 15px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    overflow: hidden;
+  }
+
+  .ant-table-title {
+    background-color: white;
+  }
+  .ant-table-thead {
+    tr {
+      $color-background: #104382;
+      th {
+        .whiteColor {
+          color: white;
+
+          p {
+            margin: 0;
+          }
+        }
+        background-color: $color-background !important;
+
+        &.ant-table-cell-scrollbar {
+          position: relative;
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            inset: 0;
+            background-color: $color-background;
+            transform: translateX(-2px);
+          }
+        }
+      }
+    }
+  }
+
+  .ant-table-tbody {
+    tr {
+      td {
+        cursor: default !important;
+        .resetMargin {
+          margin: 0;
+        }
+        border-right: 1px solid black !important;
+        &.ant-table-cell-row-hover {
+          cursor: pointer;
+          background-color: #95bcf2 !important;
+        }
+        &:last-child {
+          border-right: none !important;
+        }
+      }
+
+      &:nth-child(odd) {
+        background-color: #c1d4f2;
+        .ant-table-column-sort {
+          background-color: #c1d4f2;
+        }
+      }
+    }
+  }
+}
+
+.modalNotice {
+  .colorBlue {
+    color: #2892ff;
+    cursor: pointer;
+  }
+  .ant-modal-header {
+    background-color: #104382;
+    .ant-modal-title {
+      h2 {
+        margin: 0;
+        color: white;
+      }
+    }
+  }
+
+  .ant-modal-close-x {
+    color: white;
+  }
+
+  .ant-modal-footer {
+    display: none;
+  }
+
+  .formGroup {
+    display: flex;
+    align-items: baseline;
+    font-weight: 600;
+
+    i {
+      margin-right: 10px;
+    }
+
+    .formGroupText {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}

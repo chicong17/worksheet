@@ -1,0 +1,28 @@
+.ant-modal {
+  .ant-form {
+    .ant-row {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+table {
+  tbody {
+    border: none !important;
+    tr {
+      border: none !important;
+      td {
+        text-align: left !important;
+      }
+    }
+  }
+}
+
+.ant-col {
+  .ant-col-12 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 14px;
+    overflow: hidden;
+  }
+}

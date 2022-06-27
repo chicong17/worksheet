@@ -1,0 +1,32 @@
+.Navbar {
+  width: 100%;
+  background-color: #e9f2ff;
+  border-bottom: 2px solid #e9f2ff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  height: 70px;
+  position: relative;
+  width: 100%;
+  background-color: #e9f2ff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.contentNav {
+  width: 90%;
+  margin: auto;
+  border-bottom: 2px solid #e9f2ff;
+  height: 70px;
+  z-index: 10;
+}
+
+.containerLogo {
+  position: relative;
+  width: 200px;
+  height: 70px;
+}
+.logo {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 170px;
+  top: -70%;
+}

@@ -1,0 +1,73 @@
+.LoginContainer {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  position: relative;
+  background-color: #7f53ac;
+  background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
+  justify-content: center;
+  form {
+    width: 100%;
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 2px 5px 0 rgba(51, 62, 73, 0.6);
+    background-color: white;
+    border-radius: 6px;
+    margin: 10px;
+  }
+}
+
+.Label {
+  font-size: 16px !important;
+}
+
+.Label::after {
+  display: inline-block;
+  padding-left: 2px;
+  margin-right: 4px;
+  color: #ff4d4f;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  content: '(*)';
+}
+
+.Input {
+  margin-top: 10px;
+  width: 100%;
+  border: none !important;
+  border-bottom: black solid 1px !important;
+  font-size: 1.1rem !important;
+  padding: 0 !important;
+}
+
+.ItemSignin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.Button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 0.5rem;
+  background-color: black !important ;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  border: solid black 2px !important;
+  border-radius: 1.5px;
+  transition: 0.4s;
+  height: auto !important;
+
+  &:hover {
+    color: black !important;
+    background-color: white !important;
+    border: solid black 2px !important;
+    background-color: rgba(156, 156, 156, 0.24) !important;
+  }
+}

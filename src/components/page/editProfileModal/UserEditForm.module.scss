@@ -1,0 +1,139 @@
+.fieldset {
+  margin: 50px auto;
+  border: 1px solid black;
+  legend {
+    width: 100px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px;
+  }
+  padding: 50px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-right: 20px;
+  .infoForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .infoRowContainer {
+    margin-top: 30px;
+    .labelInput {
+      margin-top: 4px;
+    }
+  }
+  .infoBasicRow {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 5px !important;
+    .infoAvatar {
+      display: flex;
+      margin-bottom: 2% !important;
+    }
+    .infoDescription {
+      margin-left: 5%;
+    }
+  }
+  .requiredField {
+    color: red;
+    margin-left: 2px;
+  }
+}
+
+.avatarList {
+  display: flex;
+  align-items: flex-end;
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
+  .smallAvatar {
+    width: 100px;
+    height: 100px;
+  }
+  .avatarContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+  }
+  .uploadLabel {
+    text-decoration: underline;
+    color: blue;
+    font-size: 12px;
+    cursor: pointer;
+    &:hover {
+      color: rgb(166, 166, 240);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .form {
+    flex-direction: column;
+  }
+  .infoBasicRow {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  .avatarList {
+    .avatar {
+      width: 150px;
+      height: 150px;
+    }
+    .smallAvatar {
+      width: 70px;
+      height: 70px;
+      margin-left: 20px;
+    }
+    margin-bottom: 20px;
+  }
+  .infoRowContainer {
+    display: flex;
+    flex-direction: column;
+    .infoRightCol {
+      margin-left: 0px !important;
+    }
+  }
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .form {
+    flex-direction: column;
+  }
+  .avatarList {
+    .avatar {
+      width: 120px;
+      height: 120px;
+    }
+    .smallAvatar {
+      width: 70px;
+      height: 70px;
+      margin-left: 10px;
+    }
+    margin-bottom: 20px;
+  }
+  .infoRowContainer {
+    display: flex;
+    flex-direction: column;
+    .infoRightCol {
+      margin-left: 0px !important;
+    }
+  }
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}

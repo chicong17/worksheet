@@ -1,0 +1,29 @@
+.Home {
+  overflow: hidden;
+  padding: 50px 0;
+  background-color: #e9f2ff;
+}
+
+.listNotice {
+  width: 90%;
+  padding: 20px 50px;
+  .titleNotice {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .itemPage {
+    display: flex;
+    justify-content: flex-end;
+
+    span {
+      cursor: pointer;
+    }
+  }
+}
+
+.tableHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

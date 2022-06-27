@@ -1,0 +1,33 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["plugin:react/recommended", "google"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "multiline-ternary": "off",
+    "object-curly-spacing": ["error", "always", { "objectsInObjects": false }],
+    "max-len": [
+      "error",
+      { "ignoreStrings": true, "code": 120, "ignoreTemplateLiterals": true }
+    ],
+    "semi": ["error", "never"],
+    "indent": "off",
+    "require-jsdoc": "off",
+    "linebreak-style": "off",
+    "operator-linebreak": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

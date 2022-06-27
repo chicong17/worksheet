@@ -1,0 +1,18 @@
+.modalContainer {
+  .ant-modal-content {
+    .ant-modal-header {
+      border-bottom: 1px solid #7d7d7d;
+      background-color: #104382;
+      .ant-modal-title {
+        color: white;
+        font-size: 20px;
+      }
+    }
+    .ant-modal-footer {
+      border-top: none;
+    }
+  }
+  .ant-modal-close-icon {
+    color: white;
+  }
+}

@@ -1,0 +1,11 @@
+# git
+
+# editors
+.vscode
+
+
+# NPM
+**/node_modules
+
+# ext to ignore
+**/.DS_Store

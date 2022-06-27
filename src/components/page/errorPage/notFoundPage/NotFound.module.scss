@@ -1,0 +1,166 @@
+.bgPurple {
+  background: #22345e;
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: left top;
+  height: 100vh;
+  overflow: hidden;
+  .stars {
+    background: url('./image/overlayStars.svg');
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: left top;
+    .centralBody {
+      padding: 17% 5% 10% 5%;
+      text-align: center;
+      .imageNotFound {
+        position: relative;
+        z-index: 100;
+        pointer-events: none;
+      }
+      .btnGoHome {
+        position: relative;
+        z-index: 200;
+        margin: 15px auto;
+        width: 150px;
+        padding: 10px 15px;
+        border: 1px solid #ffcb39;
+        border-radius: 100px;
+        font-weight: 400;
+        display: block;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 11px;
+        transition: all 0.3s ease-in;
+        &:hover {
+          background-color: #ffcb39;
+          color: #fff;
+          transform: scale(1.05);
+          box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+    .objects {
+      img {
+        z-index: 90;
+        pointer-events: none;
+      }
+      .objectRocket {
+        z-index: 95;
+        position: absolute;
+        transform: translateX(-50px);
+        top: 75%;
+        pointer-events: none;
+        animation: rocket-movement 200s linear infinite both running;
+      }
+      .objectEarth {
+        position: absolute;
+        top: 20%;
+        left: 15%;
+        z-index: 90;
+        animation: spin-earth 100s infinite linear both;
+      }
+      .objectMoon {
+        position: absolute;
+        top: 12%;
+        left: 25%;
+      }
+      .boxAstronaut {
+        z-index: 110 !important;
+        position: absolute;
+        top: 60%;
+        right: 20%;
+        will-change: transform;
+        animation: move-astronaut 50s infinite linear both alternate;
+        .objectAstronaut {
+          animation: rotate-astronaut 200s infinite linear both alternate;
+        }
+      }
+    }
+    .glowingStars {
+      .star {
+        position: absolute;
+        border-radius: 100%;
+        background-color: #fff;
+        width: 3px;
+        height: 3px;
+        opacity: 0.3;
+        will-change: opacity;
+        &:nth-child(1) {
+          top: 80%;
+          left: 25%;
+          animation: glow-star 2s infinite ease-in-out alternate 1s;
+        }
+        &:nth-child(2) {
+          top: 20%;
+          left: 40%;
+          animation: glow-star 2s infinite ease-in-out alternate 3s;
+        }
+        &:nth-child(3) {
+          top: 25%;
+          left: 25%;
+          animation: glow-star 2s infinite ease-in-out alternate 5s;
+        }
+        &:nth-child(4) {
+          top: 75%;
+          left: 80%;
+          animation: glow-star 2s infinite ease-in-out alternate 7s;
+        }
+        &:nth-child(5) {
+          top: 90%;
+          left: 50%;
+          animation: glow-star 2s infinite ease-in-out alternate 9s;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .boxAstronaut {
+    top: 70%;
+  }
+
+  .centralBody {
+    padding-top: 25%;
+  }
+}
+
+@keyframes rocket-movement {
+  100% {
+    transform: translate(1200px, -600px);
+  }
+}
+
+@keyframes spin-earth {
+  100% {
+    transform: rotate(-360deg);
+    transition: transform 20s;
+  }
+}
+
+@keyframes move-astronaut {
+  100% {
+    transform: translate(-160px, -160px);
+  }
+}
+
+@keyframes rotate-astronaut {
+  100% {
+    transform: rotate(-720deg);
+  }
+}
+
+@keyframes glow-star {
+  40% {
+    opacity: 0.3;
+  }
+  90%,
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+    border-radius: 999999px;
+  }
+}

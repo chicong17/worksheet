@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('antd/dist/antd.min.css');
+
+html {
+  body {
+    margin: 0 auto;
+    width: 100% !important;
+    font-family: 'Lato', sans-serif;
+    background: #e9f2ff !important;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    a:hover {
+      cursor: pointer;
+    }
+    &:not(.ant-table-body)::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 7px;
+      height: 7px;
+    }
+
+    &:not(.ant-table-body)::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+    }
+  }
+  code {
+    font-family: 'Lato', sans-serif;
+  }
+}

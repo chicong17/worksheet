@@ -1,0 +1,57 @@
+.notificationContainer {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+
+  form {
+    .ant-row {
+      margin-bottom: 15px;
+    }
+    width: 100%;
+    background-color: white;
+    border-radius: 6px;
+    .divisionName {
+      text-align: left;
+      margin: 0;
+    }
+    .ItemSignin {
+      margin: 24px 0 0 0;
+      display: flex;
+      text-align: center;
+      button {
+        margin-right: 10px;
+      }
+    }
+    .ant-checkbox-group {
+      width: 100%;
+    }
+    .status {
+      max-width: 140px;
+    }
+  }
+  .ant-input-textarea-show-count:after {
+    float: right;
+    color: rgba(0, 0, 0, 0.45);
+    white-space: nowrap;
+    content: attr(data-count);
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+  }
+  .dFlex {
+    display: flex;
+    align-items: flex-start;
+  }
+  .ant-col {
+    .ant-form-item,
+    .ant-row {
+      margin: 0;
+    }
+  }
+  .requiredField {
+    color: red;
+  }
+}
